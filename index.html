@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dawon Redirect</title>
+</head>
+<body>
+    <section>
+        <h1 id="Description">A Normal Page</h1>
+    </section>
+    <script>
+        let userAgent = navigator.userAgent.toLowerCase();
+        let android = userAgent.indexOf("android")
+        let text = document.getElementById("Description")
+        
+        if (android != -1) {
+
+            window.location = "https://play.google.com/store/apps/details?id=com.dawonindustries.dawon&hl=es&gl=US"
+        }else {
+            text.innerHTML = "Lo sentimos no hay apps disponible para este dispositivo"; 
+
+        }
+    </script>
+</body>
+</html>
